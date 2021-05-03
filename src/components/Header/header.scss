@@ -3,12 +3,12 @@
   align-content: center;
   align-items: center;
   justify-content: center;
-  min-height: 4rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   flex-flow: row wrap;
   padding: 2rem;
 
   * {
-    line-height: 4rem;
     flex: 0 0 auto;
     display: inline-block;
   }
@@ -19,35 +19,19 @@
     height: 40rem;
     background: white;
     border-radius: 50%;
-    position: fixed;
+    position: absolute;
     z-index: -1;
     top: -32rem;
     left: -12rem;
     box-shadow: 0 0 1rem 0.5rem #5551;
   }
 
-  nav {
-    margin-left: auto;
+  .logo {
+    font-weight: 600;
+    border-left: 1rem;
 
     span {
-      display: inline-block;
-      margin-left: 1rem;
-      cursor: pointer;
-      background: none;
-      transition: background 0.3s;
-
-      &:active {
-        background: orange;
-      }
+      color: orange;
     }
-  }
-}
-
-.logo {
-  font-weight: 600;
-  border-left: 1rem;
-
-  span {
-    color: orange;
   }
 }

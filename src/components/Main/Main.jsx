@@ -1,9 +1,14 @@
-import styles from './Main.scss'
+import { Route, Switch } from 'react-router-dom'
+import { Home } from '../'
 
 export const Main = () => {
   return (
-    <>
-      <div>Main</div>
-    </>
+    <main>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+      </Switch>
+    </main>
   )
 }

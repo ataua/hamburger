@@ -1,8 +1,10 @@
+import { Nav } from '../'
 import logo from '../../images/logo.png'
-import { Icon } from '../../atoms'
+
 import './header.scss'
 
 export const Header = () => {
+
   return (
     <header className='header'>
 
@@ -10,28 +12,8 @@ export const Header = () => {
       <div className='logo' >
         &nbsp;BURGER<span>IAZ</span>
       </div>
+      <Nav />
 
-      <nav>
-        <span>
-          Home
-        </span>
-        <span>
-          New Menu
-        </span>
-        <span>
-          About Us
-        </span>
-        <span>
-          Main Course
-        </span>
-        <span>
-          search
-        </span>
-        <span>
-          <Icon />
-        </span>
-
-      </nav>
     </header>
   )
 }

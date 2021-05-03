@@ -1,0 +1,47 @@
+.home {
+  margin: 6rem 0;
+  max-width: 600px;
+  flex: 0 0 600px;
+
+  .open {
+    width: 500px;
+    color: lightgray;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+  }
+
+  .make {
+    font-family: Modak, fantasy;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    padding: 1rem 0;
+
+    span {
+      color: orange;
+    }
+  }
+
+  .text {
+    color: gray;
+    line-height: 1rem;
+    font-size: small;
+    max-width: 400px;
+  }
+
+  .start {
+    margin: 2rem 0;
+    background: transparent;
+    padding: 0.5rem 1rem;
+    color: lightgray;
+    border: 2px solid gray;
+    border-radius: 4rem;
+    cursor: pointer;
+
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+      background: orange;
+      color: white;
+    }
+  }
+}

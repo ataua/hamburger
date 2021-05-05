@@ -1,37 +1,90 @@
 .header {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  flex-flow: row wrap;
-  padding: 2rem;
+  width: 100%;
+  line-height: 2rem;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 10rem 1fr auto 2rem;
+  grid-template-rows: auto;
+  grid-template-areas: "logo nav input icon";
 
-  * {
-    flex: 0 0 auto;
-    display: inline-block;
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: 1fr auto 2rem;
+    grid-template-areas:
+      "logo input input"
+      "nav nav icon";
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr 2rem;
+    grid-template-areas: "logo" "input" " icon" "nav";
   }
 
   &::before {
     content: "";
-    width: 40rem;
-    height: 40rem;
+    width: 32rem;
+    height: 32rem;
     background: white;
     border-radius: 50%;
     position: absolute;
     z-index: -1;
-    top: -32rem;
-    left: -12rem;
+    top: -26rem;
+    left: -7rem;
     box-shadow: 0 0 1rem 0.5rem #5551;
   }
 
   .logo {
+    grid-area: logo;
     font-weight: 600;
-    border-left: 1rem;
+    display: flex;
+    height: 2rem;
 
-    span {
-      color: orange;
+    div {
+      margin-left: 0.5rem;
+      margin-top: 0.1rem;
+
+      span {
+        color: orange;
+      }
     }
+  }
+
+  .nav {
+    grid-area: nav;
+    margin-left: auto;
+    justify-self: end;
+
+    @media screen and (max-width: 700px) {
+      margin-left: none;
+      justify-self: stretch;
+    }
+  }
+
+  .input {
+    grid-area: input;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    input {
+      border-radius: 2rem;
+      font-family: "Open Sans", Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      min-width: 18rem;
+      padding: 0.5rem 2rem;
+      background: #f8f8f8;
+      color: #4a4a4a;
+      width: 8rem;
+      border: none;
+      outline: none;
+    }
+
+    img {
+      margin-left: -2rem;
+      height: 1rem;
+    }
+  }
+
+  .icon {
+    grid-area: icon;
   }
 }

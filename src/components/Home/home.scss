@@ -1,16 +1,26 @@
 .home {
-  margin: 6rem 0;
   max-width: 600px;
-  flex: 0 0 600px;
+  display: flex;
+  flex-flow: row nowrap;
 
+  @media screen and (max-width: 1080px) {
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  .text {
+    justify-content: center;
+  }
   .open {
-    width: 500px;
+    margin-top: 10rem;
     color: lightgray;
     font-size: 20px;
     letter-spacing: 1.5px;
   }
 
   .make {
+    margin: auto;
+    min-width: 536px;
     font-family: Modak, fantasy;
     font-size: 3.5rem;
     line-height: 3.5rem;
@@ -32,8 +42,8 @@
     margin: 2rem 0;
     background: transparent;
     padding: 0.5rem 1rem;
-    color: lightgray;
-    border: 2px solid gray;
+    color: var(--gray);
+    border: 1px solid var(--gray);
     border-radius: 4rem;
     cursor: pointer;
 

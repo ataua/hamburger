@@ -1,16 +1,49 @@
 :root {
-  --lightgray: #bbbbbb;
+  --lightgray: #fbfafa;
+  --middlegray: #f1f1f1;
+  --gray: #bbb;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Archivo+Black&family=Modak&falily=Open+Sans:wght@300;600&display=swap");
 
 body {
-  margin: 1rem 6rem;
+  min-width: 22rem;
+  margin: 0;
+  padding: 1rem 6rem;
   font-family: -apple-system, BlinkMacSystemFont, Roboto, "Ubuntu",
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fbfafa;
+  background: var(--lightgray);
+
+  @media screen and (max-width: 700px) {
+    padding: 1rem 1rem;
+  }
+
+  &:before {
+    content: "FOOD";
+    position: fixed;
+    top: 28rem;
+    left: 24rem;
+    font-family: "Archivo Black";
+    font-size: 8rem;
+    color: white;
+    text-shadow: 0 0 2px var(--gray);
+    z-index: -10;
+  }
+
+  &:after {
+    content: "";
+    border-radius: 50%;
+    background: white;
+    height: 80rem;
+    width: 80rem;
+    z-index: -5;
+    position: fixed;
+    left: clamp(30rem, 45%, 45%);
+    top: -35vh;
+    box-shadow: 0 0 1rem 0.5rem #5551;
+  }
 }
 
 body * {
@@ -18,7 +51,3 @@ body * {
   padding: 0;
   box-sizing: border-box;
 }
-
-// fontes:  Roboto - thin e bold
-//          OpenSans light
-//          'Archivo Black'

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import Search from '../../images/search.png'
 import { Icon } from '../../atoms'
 import { Nav } from '../'
 import logo from '../../images/logo.png'
@@ -39,10 +38,9 @@ export const Header = () => {
           <Nav />
         }
       </div>
-      <div className='input'>
-        <input type='search' name='search' placeholder='Search' onChange={update} onSearch={search} value={searchData} />
-        <img src={Search} alt='' onInput={search} />
-      </div>
+      <form className='input' onSubmit={search}>
+        <input type='search' name='search' placeholder='Search' onChange={update} value={searchData} />
+      </form>
       <div className='icon' onClick={() => setOpen(!open)}>
         <Icon />
       </div>

@@ -7,39 +7,6 @@
   grid-template-rows: auto;
   grid-template-areas: "logo nav input icon";
 
-  @media screen and (max-width: 1080px) {
-    grid-template-columns: 1fr auto 4rem;
-    grid-template-areas:
-      "logo input icon"
-      "nav nav nav";
-
-    .input {
-      background: white;
-    }
-  }
-
-  @media screen and (max-width: 700px) {
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "logo  logo" "input icon" "nav  nav";
-    justify-content: space-evenly;
-    width: 536px;
-    margin: 0 auto 4rem auto;
-
-    .logo {
-      justify-self: center;
-      margin: 2rem 0 4rem;
-      transform: scale(1.82);
-    }
-
-    .nav {
-      justify-self: stretch;
-    }
-
-    .input input {
-      width: 100%;
-    }
-  }
-
   &::before {
     content: "";
     width: 32rem;
@@ -110,5 +77,38 @@
 
   .icon {
     grid-area: icon;
+  }
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: 1fr auto 4rem;
+    grid-template-areas:
+      "logo input icon"
+      "nav nav nav";
+
+    .input {
+      background: white;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "logo  logo" "input icon" "nav  nav";
+    justify-content: space-evenly;
+    width: 536px;
+    margin: 0 auto 4rem auto;
+
+    .logo {
+      justify-self: center;
+      margin: 2rem 0 4rem;
+      transform: scale(1.82);
+    }
+
+    .nav {
+      justify-self: center;
+      margin: 0;
+    }
+
+    .input input {
+      width: 100%;
+    }
   }
 }

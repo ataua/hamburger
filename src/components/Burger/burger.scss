@@ -2,7 +2,14 @@
   width: 536px;
   display: flex;
   flex-flow: column nowrap;
-  margin: 0 auto;
+  margin-left: auto;
+
+  @media screen and (max-width: 1080px) {
+    margin: auto;
+  }
+  @media screen and (max-width: 700px) {
+    color: white;
+  }
 
   .back {
     font-family: "Archivo Black", Arial, Helvetica, sans-serif;
@@ -21,10 +28,6 @@
 
   img {
     margin-top: 3rem;
-  }
-
-  @media screen and (max-width: 700px) {
-    color: white;
   }
 }
 

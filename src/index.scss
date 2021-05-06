@@ -6,7 +6,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Archivo+Black&family=Modak&falily=Open+Sans:wght@300;600&display=swap");
 
+html {
+  overflow-y: overlay;
+}
 body {
+  max-width: calc(100vw-12px);
   min-width: 22rem;
   margin: 0;
   padding: 1rem 6rem;

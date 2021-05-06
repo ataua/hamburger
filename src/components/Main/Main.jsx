@@ -1,5 +1,5 @@
 import { Route, Switch } from 'react-router-dom'
-import { Home } from '../'
+import { Home, Placeholder } from '../'
 
 export const Main = () => {
   return (
@@ -7,6 +7,15 @@ export const Main = () => {
       <Switch>
         <Route exact path='/'>
           <Home />
+        </Route>
+        <Route path='/menu'>
+          <Placeholder />
+        </Route>
+        <Route path='/about'>
+          <Placeholder />
+        </Route>
+        <Route path='/main'>
+          <Placeholder />
         </Route>
       </Switch>
     </main>

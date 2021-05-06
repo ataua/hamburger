@@ -10,32 +10,52 @@ footer {
     flex-flow: column nowrap;
     justify-content: center;
   }
-}
 
-.about {
-  width: 25rem;
-}
-.footer {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-
-  span {
+  .about {
+    width: 25rem;
     color: var(--gray);
-  }
+    margin-bottom: 2rem;
 
-  .icons {
-    margin: 1.5rem;
-    .social {
-      margin: 0.5rem;
-      padding: 0.5rem;
-      background: white;
-      border-radius: 50%;
-      box-shadow: 0 0 0.3rem 0.3rem #5551;
+    h3 {
+      position: relative;
+      color: orange;
+      margin-bottom: 0.5rem;
+
+      &:before {
+        // aquele risquinho
+        content: "";
+        height: 0.3rem;
+        width: 10rem;
+        background: black;
+        position: absolute;
+        left: -12rem;
+        bottom: 0.5rem;
+      }
     }
   }
 
-  @media screen and (max-width: 1080px) {
-    flex-flow: column nowrap;
+  .footer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    span {
+      color: var(--gray);
+    }
+
+    .icons {
+      margin: 1rem;
+      .social {
+        margin: 0.5rem;
+        padding: 0.5rem;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 0 0.3rem 0.3rem #5551;
+      }
+    }
+
+    @media screen and (max-width: 1080px) {
+      flex-flow: column nowrap;
+    }
   }
 }

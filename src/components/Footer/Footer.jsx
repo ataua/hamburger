@@ -8,8 +8,8 @@ export const Footer = () => {
   return (
     <footer>
       <div className="about">
-        <h3>Abut Us</h3>
-        Cum rem aspernatur nobis quod quibusdam odit, laborum quam quaerat labore animi, similique eveniet non esse inventore impedit sunt omnis illum sapiente enim. Veniam enim consectetur modi error molestiae quia!
+        <h3>About Us</h3>
+        Cum rem aspernatur nobis quod quibusdam odit, laborum quam quaerat labore animi, similique eveniet non esse inventore!
       </div>
       <div className='footer'>
         <span>Don't Miss Our Promo On</span>

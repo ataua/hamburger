@@ -1,4 +1,6 @@
 footer {
+  margin-top: 3rem;
+  bottom: 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -9,6 +11,7 @@ footer {
     justify-content: center;
   }
 }
+
 .about {
   width: 25rem;
 }

@@ -1,21 +1,26 @@
 .home {
-  max-width: 600px;
   display: flex;
   flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-between;
 
   @media screen and (max-width: 1080px) {
     flex-flow: column nowrap;
-    justify-content: center;
+
+    .text {
+      margin: 0 auto;
+    }
   }
 
   .text {
     justify-content: center;
   }
+
   .open {
-    margin-top: 10rem;
     color: lightgray;
     font-size: 20px;
     letter-spacing: 1.5px;
+    margin-top: 5rem;
   }
 
   .make {
@@ -25,7 +30,7 @@
     font-size: 3.5rem;
     line-height: 3.5rem;
     padding: 1rem 0;
-
+    color: black;
     span {
       color: orange;
     }
